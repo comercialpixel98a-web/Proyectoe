@@ -1,0 +1,44 @@
+---
+const services = [
+  {
+    title: "Consultoría Estratégica",
+    description: "Desarrollamos estrategias empresariales que maximizan el rendimiento y minimizan los riesgos operacionales.",
+    icon: "📊"
+  },
+  {
+    title: "Transformación Digital",
+    description: "Implementamos tecnologías avanzadas para optimizar procesos y aumentar la competitividad.",
+    icon: "💻"
+  },
+  {
+    title: "Gestión de Talento",
+    description: "Soluciones integrales para el desarrollo, retención y optimización del capital humano.",
+    icon: "👥"
+  },
+  {
+    title: "Análisis Financiero",
+    description: "Evaluaciones exhaustivas que proporcionan insights críticos para la toma de decisiones.",
+    icon: "📈"
+  }
+];
+---
+
+<section id="servicios" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">Servicios Especializados</h2>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        Ofrecemos soluciones empresariales de clase mundial adaptadas a las necesidades específicas de su organización.
+      </p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {services.map((service) => (
+        <div class="bg-gray-50 p-8 rounded-lg hover:shadow-lg transition duration-300 border border-gray-200">
+          <div class="text-4xl mb-4">{service.icon}</div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
+          <p class="text-gray-600">{service.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
