@@ -1,90 +1,264 @@
 ---
 ---
 
-<div class="min-h-screen bg-black relative overflow-hidden flex flex-col items-center justify-center px-4 sm:px-6 py-6 sm:py-8">
+<div class="bg-black text-white overflow-x-hidden">
   
-  <div class="absolute inset-0 overflow-hidden">
+  <!-- Fondo animado fijo -->
+  <div class="fixed inset-0 overflow-hidden z-0">
     <div class="absolute inset-0 opacity-30">
-      <div class="absolute w-72 sm:w-80 md:w-96 h-72 sm:h-80 md:h-96 bg-blue-600 rounded-full mix-blend-multiply filter blur-[200px] sm:blur-[300px] md:blur-[350px] animate-blob"></div>
-      <div class="absolute w-72 sm:w-80 md:w-96 h-72 sm:h-80 md:h-96 bg-blue-800 rounded-full mix-blend-multiply filter blur-[200px] sm:blur-[300px] md:blur-[350px] animate-blob animation-delay-2000 -top-16 sm:-top-20 -right-16 sm:-right-20"></div>
-      <div class="absolute w-72 sm:w-80 md:w-96 h-72 sm:h-80 md:h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-[200px] sm:blur-[300px] md:blur-[350px] animate-blob animation-delay-4000 -bottom-20 sm:-bottom-30 -left-16 sm:-left-20"></div>
+      <div class="absolute w-72 sm:w-80 md:w-96 h-72 sm:h-80 md:h-96 bg-blue-600 rounded-full mix-blend-multiply filter blur-[250px] sm:blur-[300px] md:blur-[350px] animate-blob"></div>
+      <div class="absolute w-72 sm:w-80 md:w-96 h-72 sm:h-80 md:h-96 bg-blue-800 rounded-full mix-blend-multiply filter blur-[250px] sm:blur-[300px] md:blur-[350px] animate-blob animation-delay-2000 -top-16 sm:-top-20 -right-16 sm:-right-20"></div>
+      <div class="absolute w-72 sm:w-80 md:w-96 h-72 sm:h-80 md:h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-[250px] sm:blur-[300px] md:blur-[350px] animate-blob animation-delay-4000 -bottom-20 sm:-bottom-30 -left-16 sm:-left-20"></div>
     </div>
-    
-    <div class="absolute inset-0 hidden sm:block">
-      <div class="particle particle-1"></div>
-      <div class="particle particle-2"></div>
-      <div class="particle particle-3"></div>
-      <div class="particle particle-4"></div>
-      <div class="particle particle-5"></div>
-    </div>
-    
     <div class="absolute inset-0 bg-gradient-to-br from-transparent via-blue-900/10 to-blue-800/20"></div>
   </div>
-  
-  <div class="text-center max-w-sm sm:max-w-2xl md:max-w-4xl mx-auto flex-1 flex flex-col justify-center relative z-10">
-    
-    <div class="mb-8 sm:mb-12 md:mb-16">
-      <div class="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-2">
-        <img src="/LOGO-PROYECTO-E.svg" alt="Proyecto E" class="h-20 sm:h-20 md:h-20" />
-        <h1 class="text-xl sm:text-3xl md:text-4xl font-bold text-white tracking-wider">PROYECTO E</h1>
+
+  <!-- Sección 1: Logo Grande Full -->
+  <section class="min-h-screen flex items-center justify-center relative z-10" id="section1">
+    <div class="text-center px-4 logo-container">
+      <div class="flex flex-col items-center justify-center space-y-6">
+        <img src="/LOGO-PROYECTO-E.svg" alt="Proyecto E" class="logo-main transition-all duration-1000 ease-out" />
+        <h1 class="proyecto-text text-4xl sm:text-6xl md:text-8xl font-black tracking-wider opacity-0 transition-all duration-1000 ease-out">
+          PROYECTO E
+        </h1>
+      </div>
+      <!-- Scroll indicator -->
+      <div class="scroll-indicator absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div class="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+          <div class="w-1 h-3 bg-white/60 rounded-full mt-2 animate-pulse"></div>
+        </div>
+        <p class="text-xs text-white/60 mt-2">SCROLL</p>
       </div>
     </div>
+  </section>
 
-    <div class="mb-8 sm:mb-10 md:mb-12">
-      <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 md:mb-8 leading-tight">
-        ESTAMOS<br>
-        CONSTRUYENDO<br>
-        ALGO GRANDE
-      </h2>
-      <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 sm:mb-10 md:mb-12 px-2">
-        Muy pronto lanzaremos nuestro nuevo<br class="hidden sm:block">sitio web
-      </p>
-    </div>
-
-    <div class="mb-8 sm:mb-10 md:mb-12 w-full max-w-xs sm:max-w-lg md:max-w-2xl mx-auto px-4 sm:px-0">
-      <div class="w-full bg-slate-700 rounded-full h-2">
-        <div class="bg-blue-500 h-2 rounded-full transition-all duration-1000" style="width: 45%"></div>
-      </div>
-    </div>
-
-    <div class="mb-6 sm:mb-8 md:mb-10 w-full max-w-xs sm:max-w-lg md:max-w-2xl mx-auto px-4 sm:px-0">
-      <form id="emailForm" action="https://formsubmit.co/Gerenciaproyectoe@gmail.com" method="POST" class="flex flex-col space-y-3 sm:space-y-0 sm:flex-row sm:gap-4">
-        <input type="hidden" name="_subject" value="Nueva suscripción - Proyecto E">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
+  <!-- Sección 2: Mensaje Principal -->
+  <section class="min-h-screen flex items-center justify-center relative z-10 px-4" id="section2">
+    <div class="text-center max-w-6xl">
+      <!-- Logo pequeño arriba -->
+      <div class="logo-small mb-8 opacity-0 transform translate-y-8 transition-all duration-800 ease-out">
         
-        <input 
-          type="email" 
-          name="email"
-          id="emailInput"
-          placeholder="tucorreo@ejemplo.com"
-          required
-          class="flex-1 px-4 sm:px-6 py-3 sm:py-4 bg-slate-800/80 backdrop-blur-sm border border-slate-600 rounded-full text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all text-sm sm:text-base"
-        >
-        <button type="submit" id="submitBtn" class="px-6 sm:px-8 py-3 sm:py-4 bg-blue-500 hover:bg-blue-600 active:bg-blue-700 text-white font-semibold rounded-full transition-colors text-sm sm:text-base touch-manipulation">
-          NOTIFICARME
-        </button>
-      </form>
-    </div>
-
-    <div id="confirmMessage" class="hidden mb-12 sm:mb-14 md:mb-16">
-      <div class="bg-green-500/10 border border-green-500/30 rounded-2xl p-4 sm:p-6 backdrop-blur-sm">
-        <p class="text-green-400 font-semibold text-sm sm:text-base mb-1">¡Listo!</p>
-        <p class="text-gray-300 text-sm sm:text-base">Te notificaremos cuando estemos listos</p>
+      </div>
+      
+      <!-- Mensaje grande -->
+      <div class="main-message opacity-0 transform translate-y-12 transition-all duration-1000 ease-out">
+        <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black mb-8 leading-tight">
+          <span class="block title-line opacity-0 transform translate-y-8 transition-all duration-800 ease-out delay-200">ESTAMOS</span>
+          <span class="block title-line opacity-0 transform translate-y-8 transition-all duration-800 ease-out delay-400">CONSTRUYENDO</span>
+          <span class="block title-line opacity-0 transform translate-y-8 transition-all duration-800 ease-out delay-600 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">ALGO GRANDE</span>
+        </h2>
       </div>
     </div>
+  </section>
 
-  </div>
+  <!-- Sección 3: Subtítulo -->
+  <section class="min-h-screen flex items-center justify-center relative z-10 px-4" id="section3">
+    <div class="text-center max-w-4xl">
+      <div class="subtitle-container opacity-0 transform translate-y-8 transition-all duration-1000 ease-out">
+        <p class="text-2xl sm:text-3xl md:text-4xl text-gray-300 font-light leading-relaxed mb-12">
+          Muy pronto lanzaremos nuestro<br>
+          <span class="font-semibold text-white">nuevo sitio web</span>
+        </p>
+        
+        <!-- Progress bar animado -->
+        <div class="w-full max-w-2xl mx-auto mb-8">
+          <div class="w-full bg-slate-700 rounded-full h-3 overflow-hidden">
+            <div class="progress-bar bg-gradient-to-r from-blue-500 to-cyan-400 h-3 rounded-full transition-all duration-2000 ease-out" style="width: 0%"></div>
+          </div>
+          <p class="text-sm text-gray-400 mt-3">Desarrollo en progreso...</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <footer class="text-center relative z-10 px-4">
-    <p class="text-gray-400 text-xs sm:text-sm">
-      © 2025 Proyecto E Group S.A.S. –<br class="sm:hidden"> Todos los derechos reservados
-    </p>
-  </footer>
+  <!-- Sección 4: Página Final Completa -->
+  <section class="min-h-screen flex flex-col items-center justify-center relative z-10 px-4 sm:px-6 py-6 sm:py-8" id="section4">
+    <div class="text-center max-w-sm sm:max-w-2xl md:max-w-4xl mx-auto flex-1 flex flex-col justify-center w-full">
+      
+      <!-- Logo -->
+      <div class="final-logo mb-8 sm:mb-12 md:mb-16 opacity-0 transform translate-y-8 transition-all duration-800 ease-out">
+        <div class="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-2">
+          <img src="/LOGO-PROYECTO-E.svg" alt="Proyecto E" class="h-12 sm:h-16 md:h-20" />
+          <h1 class="text-xl sm:text-3xl md:text-4xl font-bold text-white tracking-wider">PROYECTO E</h1>
+        </div>
+      </div>
+
+      <!-- Mensaje Principal -->
+      <div class="final-message mb-8 sm:mb-10 md:mb-12 opacity-0 transform translate-y-8 transition-all duration-1000 ease-out">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 md:mb-8 leading-tight">
+          ESTAMOS<br>
+          CONSTRUYENDO<br>
+          ALGO GRANDE
+        </h2>
+        <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 sm:mb-10 md:mb-12 px-2">
+          Muy pronto lanzaremos nuestro nuevo<br class="hidden sm:block">sitio web
+        </p>
+      </div>
+
+      <!-- Progress Bar -->
+      <div class="final-progress mb-8 sm:mb-10 md:mb-12 w-full max-w-xs sm:max-w-lg md:max-w-2xl mx-auto px-4 sm:px-0 opacity-0 transform translate-y-8 transition-all duration-1000 ease-out">
+        <div class="w-full bg-slate-700 rounded-full h-2">
+          <div class="final-progress-bar bg-blue-500 h-2 rounded-full transition-all duration-2000" style="width: 0%"></div>
+        </div>
+      </div>
+
+      <!-- Email Form -->
+      <div class="final-form mb-6 sm:mb-8 md:mb-10 w-full max-w-xs sm:max-w-lg md:max-w-2xl mx-auto px-4 sm:px-0 opacity-0 transform translate-y-8 transition-all duration-1000 ease-out">
+        <form id="emailForm" action="https://formsubmit.co/info@proyectoe.com" method="POST" class="flex flex-col space-y-3 sm:space-y-0 sm:flex-row sm:gap-4">
+          <input type="hidden" name="_subject" value="Nueva suscripción - Proyecto E">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          
+          <input 
+            type="email" 
+            name="email"
+            id="emailInput"
+            placeholder="tucorreo@ejemplo.com"
+            required
+            class="flex-1 px-4 sm:px-6 py-3 sm:py-4 bg-slate-800/80 backdrop-blur-sm border border-slate-600 rounded-full text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all text-sm sm:text-base"
+          >
+          <button type="submit" id="submitBtn" class="px-6 sm:px-8 py-3 sm:py-4 bg-blue-500 hover:bg-blue-600 active:bg-blue-700 text-white font-semibold rounded-full transition-colors text-sm sm:text-base touch-manipulation">
+            NOTIFICARME
+          </button>
+        </form>
+      </div>
+
+      <!-- Mensaje de confirmación -->
+      <div id="confirmMessage" class="hidden mb-12 sm:mb-14 md:mb-16">
+        <div class="bg-green-500/10 border border-green-500/30 rounded-2xl p-4 sm:p-6 backdrop-blur-sm">
+          <div class="text-2xl sm:text-3xl mb-2">✅</div>
+          <p class="text-green-400 font-semibold text-sm sm:text-base mb-1">¡Listo!</p>
+          <p class="text-gray-300 text-sm sm:text-base">Te notificaremos cuando estemos listos</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="final-footer text-center relative z-10 px-4 opacity-0 transform translate-y-8 transition-all duration-1000 ease-out">
+      <p class="text-gray-400 text-xs sm:text-sm">
+        © 2025 Proyecto E Group S.A.S. –<br class="sm:hidden"> Todos los derechos reservados
+      </p>
+    </footer>
+  </section>
 
 </div>
 
 <script>
+  // Scroll animations
+  function handleScroll() {
+    const scrollY = window.scrollY;
+    const windowHeight = window.innerHeight;
+    
+    // Sección 1 - Logo scaling
+    const section1 = document.getElementById('section1');
+    const logoMain = document.querySelector('.logo-main') as HTMLElement;
+    const proyectoText = document.querySelector('.proyecto-text') as HTMLElement;
+    const scrollIndicator = document.querySelector('.scroll-indicator') as HTMLElement;
+    
+    if (section1 && logoMain && proyectoText && scrollIndicator) {
+      if (scrollY < windowHeight) {
+        const progress = scrollY / windowHeight;
+        const scale = 1 - (progress * 0.3);
+        const opacity = 1 - (progress * 1.5);
+        
+        logoMain.style.transform = `scale(${scale})`;
+        proyectoText.style.opacity = Math.max(0, 1 - (progress * 2)).toString();
+        scrollIndicator.style.opacity = Math.max(0, opacity).toString();
+      }
+    }
+    
+    // Sección 2 - Main message
+    const section2 = document.getElementById('section2');
+    if (section2) {
+      const rect = section2.getBoundingClientRect();
+      const logoSmall = section2.querySelector('.logo-small');
+      const mainMessage = section2.querySelector('.main-message');
+      const titleLines = section2.querySelectorAll('.title-line');
+      
+      if (rect.top < windowHeight * 0.7) {
+        logoSmall?.classList.add('opacity-100', 'translate-y-0');
+        logoSmall?.classList.remove('opacity-0', 'translate-y-8');
+        
+        setTimeout(() => {
+          mainMessage?.classList.add('opacity-100', 'translate-y-0');
+          mainMessage?.classList.remove('opacity-0', 'translate-y-12');
+          
+          titleLines.forEach((line, index) => {
+            setTimeout(() => {
+              line.classList.add('opacity-100', 'translate-y-0');
+              line.classList.remove('opacity-0', 'translate-y-8');
+            }, index * 200);
+          });
+        }, 300);
+      }
+    }
+    
+    // Sección 3 - Subtitle and progress
+    const section3 = document.getElementById('section3');
+    if (section3) {
+      const rect = section3.getBoundingClientRect();
+      const subtitleContainer = section3.querySelector('.subtitle-container');
+      const progressBar = section3.querySelector('.progress-bar') as HTMLElement;
+      
+      if (rect.top < windowHeight * 0.7) {
+        subtitleContainer?.classList.add('opacity-100', 'translate-y-0');
+        subtitleContainer?.classList.remove('opacity-0', 'translate-y-8');
+        
+        setTimeout(() => {
+          if (progressBar) progressBar.style.width = '75%';
+        }, 800);
+      }
+    }
+    
+    // Sección 4 - Página final completa
+    const section4 = document.getElementById('section4');
+    if (section4) {
+      const rect = section4.getBoundingClientRect();
+      const finalLogo = section4.querySelector('.final-logo');
+      const finalMessage = section4.querySelector('.final-message');
+      const finalProgress = section4.querySelector('.final-progress');
+      const finalForm = section4.querySelector('.final-form');
+      const finalFooter = section4.querySelector('.final-footer');
+      const finalProgressBar = section4.querySelector('.final-progress-bar') as HTMLElement;
+      
+      if (rect.top < windowHeight * 0.8) {
+        // Logo aparece primero
+        setTimeout(() => {
+          finalLogo?.classList.add('opacity-100', 'translate-y-0');
+          finalLogo?.classList.remove('opacity-0', 'translate-y-8');
+        }, 100);
+        
+        // Mensaje principal
+        setTimeout(() => {
+          finalMessage?.classList.add('opacity-100', 'translate-y-0');
+          finalMessage?.classList.remove('opacity-0', 'translate-y-8');
+        }, 300);
+        
+        // Progress bar
+        setTimeout(() => {
+          finalProgress?.classList.add('opacity-100', 'translate-y-0');
+          finalProgress?.classList.remove('opacity-0', 'translate-y-8');
+          // Animar el progreso
+          if (finalProgressBar) finalProgressBar.style.width = '45%';
+        }, 600);
+        
+        // Formulario
+        setTimeout(() => {
+          finalForm?.classList.add('opacity-100', 'translate-y-0');
+          finalForm?.classList.remove('opacity-0', 'translate-y-8');
+        }, 900);
+        
+        // Footer
+        setTimeout(() => {
+          finalFooter?.classList.add('opacity-100', 'translate-y-0');
+          finalFooter?.classList.remove('opacity-0', 'translate-y-8');
+        }, 1200);
+      }
+    }
+  }
+  
+  // Form handling
   const form = document.getElementById('emailForm') as HTMLFormElement;
   const emailInput = document.getElementById('emailInput') as HTMLInputElement;
   const submitBtn = document.getElementById('submitBtn') as HTMLButtonElement;
@@ -99,7 +273,7 @@
       submitBtn.innerHTML = 'ENVIANDO...';
       submitBtn.disabled = true;
       
-      fetch('https://formsubmit.co/Gerenciaproyectoe@gmail.com', {
+      fetch('https://formsubmit.co/info@proyectoe.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -114,7 +288,6 @@
       .then(() => {
         form.style.display = 'none';
         confirmMessage.classList.remove('hidden');
-        confirmMessage.classList.add('animate-pulse');
       })
       .catch(() => {
         submitBtn.innerHTML = 'NOTIFICARME';
@@ -123,22 +296,35 @@
       });
     });
   }
+  
+  // Initialize
+  window.addEventListener('scroll', handleScroll);
+  window.addEventListener('load', handleScroll);
 </script>
 
 <style>
+  .logo-main {
+    height: 120px;
+    width: auto;
+  }
+  
+  @media (min-width: 640px) {
+    .logo-main {
+      height: 180px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .logo-main {
+      height: 240px;
+    }
+  }
+  
   @keyframes blob {
-    0% {
-      transform: translate(0px, 0px) scale(1);
-    }
-    33% {
-      transform: translate(15px, -25px) scale(1.05);
-    }
-    66% {
-      transform: translate(-10px, 10px) scale(0.95);
-    }
-    100% {
-      transform: translate(0px, 0px) scale(1);
-    }
+    0% { transform: translate(0px, 0px) scale(1); }
+    33% { transform: translate(15px, -25px) scale(1.05); }
+    66% { transform: translate(-10px, 10px) scale(0.95); }
+    100% { transform: translate(0px, 0px) scale(1); }
   }
   
   .animate-blob {
@@ -153,65 +339,7 @@
     animation-delay: 4s;
   }
   
-  .particle {
-    position: absolute;
-    width: 3px;
-    height: 3px;
-    background: #3b82f6;
-    border-radius: 50%;
-    opacity: 0.6;
-    animation: float 8s ease-in-out infinite;
-  }
-  
-  .particle-1 {
-    top: 20%;
-    left: 20%;
-    animation-delay: 0s;
-    animation-duration: 10s;
-  }
-  
-  .particle-2 {
-    top: 60%;
-    right: 30%;
-    animation-delay: 2s;
-    animation-duration: 8s;
-  }
-  
-  .particle-3 {
-    bottom: 30%;
-    left: 10%;
-    animation-delay: 4s;
-    animation-duration: 12s;
-  }
-  
-  .particle-4 {
-    top: 40%;
-    right: 20%;
-    animation-delay: 1s;
-    animation-duration: 9s;
-  }
-  
-  .particle-5 {
-    bottom: 20%;
-    right: 10%;
-    animation-delay: 3s;
-    animation-duration: 11s;
-  }
-  
-  @keyframes float {
-    0%, 100% {
-      transform: translateY(0px) translateX(0px);
-      opacity: 0.6;
-    }
-    50% {
-      transform: translateY(-15px) translateX(8px);
-      opacity: 1;
-    }
-  }
-  
-  @media (max-width: 640px) {
-    .animate-blob {
-      animation-duration: 10s;
-    }
+  html {
+    scroll-behavior: smooth;
   }
 </style>
